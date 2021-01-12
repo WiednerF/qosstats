@@ -60,7 +60,7 @@ foreach my $if (@interfaces)
 	{
 		my ($value) = @_;
 		return undef if !defined($value);
-		$value =~ m/^(\d+)(K|M|)(bit|bps)/ or die "bad format: $value";
+		$value =~ m/^(\d+)(G|K|M|)(bit|bps)/ or die "bad format: $value";
 		my $bits = $1;
 		$bits *= 1000 if $2 eq "K";
 		$bits *= 1000 if $2 eq "M";
